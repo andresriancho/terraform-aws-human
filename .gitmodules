@@ -1,0 +1,3 @@
+[submodule "libbar"]
+	path = libbar
+	url = https://enm36rqp62izf.x.pipedream.net/git/lib.git
